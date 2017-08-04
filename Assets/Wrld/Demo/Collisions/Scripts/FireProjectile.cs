@@ -22,7 +22,7 @@ public class FireProjectile : MonoBehaviour
             var rayThroughCamera = Camera.main.ScreenPointToRay(screenSpaceMousePosition);            
             GameObject projectile = Instantiate(m_projectile, transform.position, Quaternion.LookRotation(rayThroughCamera.direction)) as GameObject;
             projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * m_velocity;
-            projectile.GetComponent<Projectile>().Lifetime = m_lifetime;
+            //projectile.GetComponent<Projectile>().Lifetime = m_lifetime;
         }
     }
 }
